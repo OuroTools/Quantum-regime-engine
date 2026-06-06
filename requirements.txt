@@ -1,0 +1,21 @@
+# Install everything (recommended):
+#   pip install -e ".[all]"
+#
+# Or install from this file only (no quantum/notebook):
+#   pip install -r requirements.txt
+
+yfinance>=0.2.40
+numpy>=1.26.0
+pandas>=2.2.0
+hmmlearn>=0.3.2
+scipy>=1.13.0
+matplotlib>=3.8.0
+scikit-learn>=1.4.0
+streamlit>=1.32.0
+plotly>=5.20.0
+qiskit>=1.0.0
+qiskit-algorithms>=0.3.0
+qiskit-optimization>=0.6.0
+jupyter>=1.0.0
+ipykernel>=6.29.0
+pytest>=8.0.0

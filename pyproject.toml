@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-regime-engine"
+version = "0.1.0"
+description = "HMM market regime detection with backtesting and optional QAOA portfolio optimization"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Omar" }]
+keywords = ["finance", "hmm", "regime-detection", "quantum", "backtest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "yfinance>=0.2.40",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "hmmlearn>=0.3.2",
+    "scipy>=1.13.0",
+    "matplotlib>=3.8.0",
+    "scikit-learn>=1.4.0",
+    "streamlit>=1.32.0",
+    "plotly>=5.20.0",
+]
+
+[project.optional-dependencies]
+quantum = [
+    "qiskit>=1.0.0",
+    "qiskit-algorithms>=0.3.0",
+    "qiskit-optimization>=0.6.0",
+]
+notebook = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+all = [
+    "quantum-regime-engine[quantum,notebook,dev]",
+]
+
+[project.scripts]
+regime-engine = "regime_engine.cli:main"
+regime-dashboard = "regime_engine.cli:dashboard_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
