@@ -9,7 +9,7 @@ description = "HMM market regime detection with backtesting and optional QAOA po
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "Omar" }]
+authors = [{ name = "OuroTools" }]
 keywords = ["finance", "hmm", "regime-detection", "quantum", "backtest"]
 classifiers = [
     "Development Status :: 4 - Beta",

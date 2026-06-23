@@ -36,7 +36,7 @@ GitHub will show you a page with setup commands. Keep that tab open.
 Open PowerShell or Terminal:
 
 ```bash
-cd c:\Users\Omar\OneDrive\Desktop\Software\quantum-regime-engine
+cd path\to\quantum-regime-engine
 
 git init
 git branch -M main
@@ -61,10 +61,10 @@ git commit -m "Initial commit: regime detection engine with HMM, backtest, and d
 
 ## Step 4 — Connect to GitHub and push
 
-For this project (username **OmegaQuantum-Tools**):
+For this project (org **OuroTools**):
 
 ```bash
-git remote add origin https://github.com/OmegaQuantum-Tools/quantum-regime-engine.git
+git remote add origin https://github.com/OuroTools/Quantum-regime-engine.git
 git push -u origin main
 ```
 
@@ -123,7 +123,7 @@ git push
 ## Clone on another computer
 
 ```bash
-git clone https://github.com/OmegaQuantum-Tools/quantum-regime-engine.git
+git clone https://github.com/OuroTools/Quantum-regime-engine.git
 cd quantum-regime-engine
 pip install -e ".[all]"
 regime-engine
@@ -137,7 +137,7 @@ regime-dashboard
 | Problem | Fix |
 |---------|-----|
 | `git: command not found` | Install Git and restart terminal |
-| `remote origin already exists` | `git remote set-url origin https://github.com/OmegaQuantum-Tools/quantum-regime-engine.git` |
+| `remote origin already exists` | `git remote set-url origin https://github.com/OuroTools/Quantum-regime-engine.git` |
 | Push rejected | `git pull origin main --rebase` then `git push` |
 | Large files rejected | Don't commit `output/` charts — `.gitignore` handles this |
 
